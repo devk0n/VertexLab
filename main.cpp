@@ -11,7 +11,6 @@
 #include "imgui.h"
 #include "imgui_manager.h"
 #include "imgui_widgets.h"
-#include "shader.h"
 
 // Global variables
 Camera camera;
