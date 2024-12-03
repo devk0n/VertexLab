@@ -34,7 +34,7 @@ GridData CreateGrid() {
     GridData gridData;
 
     // Generate the grid vertices
-    GenerateGrid(gridData.vertices);
+    GenerateGrid(gridData.vertices, 10.0f, 1.0f); // Example size and spacing
 
     // Generate and bind VAO and VBO
     glGenVertexArrays(1, &gridData.vao);

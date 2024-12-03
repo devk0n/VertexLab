@@ -29,7 +29,7 @@ int main() {
     SetupCallbacks(window);
     ImGuiManager::Init(window);
 
-    // Create grid
+    // Create grid and axes
     GridData grid = CreateGrid();
 
     // Main render loop
@@ -66,7 +66,7 @@ int main() {
         glm::mat4 view = camera.getViewMatrix();
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1280.0f / 960.0f, 0.1f, 100.0f);
 
-        // Draw grid
+        // Draw grid and axes
         DrawGrid(grid, view, projection);
 
         // Render ImGui and swap buffers

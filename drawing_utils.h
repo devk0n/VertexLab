@@ -18,7 +18,8 @@ struct GridData {
 };
 
 // Function declarations
-void GenerateGrid(std::vector<float>& gridVertices, float size = 10.0f, float spacing = 1.0f);
+// Grid
+void GenerateGrid(std::vector<float>& gridVertices, float size = 25.0f, float spacing = 1.0f);
 GridData CreateGrid();
 void DrawGrid(const GridData& grid, const glm::mat4& view, const glm::mat4& projection);
 
