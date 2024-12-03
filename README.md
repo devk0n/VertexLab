@@ -25,7 +25,7 @@ VertexLab is a C++ application designed to demonstrate real-time rendering techn
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/VertexLab.git
+   git clone https://github.com/devk0n/VertexLab.git
    cd VertexLab
    ```
 
