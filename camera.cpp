@@ -4,16 +4,15 @@
 #include <glm/gtx/string_cast.hpp>
 #include <iostream>
 
-Camera::Camera()
-    : target(0.0f, 0.0f, 0.0f), up(0.0f, 1.0f, 0.0f),
-      distance(10.0f), yaw(-90.0f), pitch(20.0f) {
+Camera::Camera() : target(0.0f, 0.0f, 0.0f), up(0.0f, 1.0f, 0.0f),
+      yaw(-90.0f), pitch(20.0f), distance(10.0f) {
     updatePosition();
 }
 
 void Camera::updatePosition() {
-    float x = distance * cos(glm::radians(pitch)) * cos(glm::radians(yaw));
-    float y = distance * sin(glm::radians(pitch));
-    float z = distance * cos(glm::radians(pitch)) * sin(glm::radians(yaw));
+    const float x = distance * cos(glm::radians(pitch)) * cos(glm::radians(yaw));
+    const float y = distance * sin(glm::radians(pitch));
+    const float z = distance * cos(glm::radians(pitch)) * sin(glm::radians(yaw));
     position = target + glm::vec3(x, y, z);
 }
 
@@ -47,7 +46,7 @@ void Camera::processKeyboard(GLFWwindow* window, const double deltaTime) {
     const glm::vec3 direction = glm::normalize(target - position);
     const glm::vec3 right = glm::normalize(glm::cross(direction, up));
 
-    float speed = 15.0f * deltaTime;
+    const float speed = 15.0f * deltaTime;
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
         target += direction * speed;
