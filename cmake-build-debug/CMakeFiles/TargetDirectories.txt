@@ -1,0 +1,3 @@
+/home/devkon/CLionProjects/VertexLab/cmake-build-debug/CMakeFiles/VertexLab.dir
+/home/devkon/CLionProjects/VertexLab/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/devkon/CLionProjects/VertexLab/cmake-build-debug/CMakeFiles/rebuild_cache.dir
