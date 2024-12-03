@@ -3,3 +3,4 @@
    *.h linguist-language=C++
 
    backends/** linguist-vendored
+   .idea/** linguist-vendored
