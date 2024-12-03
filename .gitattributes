@@ -4,3 +4,4 @@
 
    backends/** linguist-vendored
    .idea/** linguist-vendored
+   cmake-build-debug/** linguist-vendored
