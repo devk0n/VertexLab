@@ -12,12 +12,20 @@
 void GenerateGrid(std::vector<float>& gridVertices, float size, float spacing) {
     float halfSize = size / 2.0f;
     for (float i = -halfSize; i <= halfSize; i += spacing) {
-        // Add vertices for a line parallel to X-axis
-        gridVertices.insert(gridVertices.end(), {i, 0.0f, -halfSize, 0.7f, 0.7f, 0.7f});
-        gridVertices.insert(gridVertices.end(), {i, 0.0f, halfSize, 0.7f, 0.7f, 0.7f});
-        // Add vertices for a line parallel to Z-axis
-        gridVertices.insert(gridVertices.end(), {-halfSize, 0.0f, i, 0.7f, 0.7f, 0.7f});
-        gridVertices.insert(gridVertices.end(), {halfSize, 0.0f, i, 0.7f, 0.7f, 0.7f});
+        // Gradient colors
+        float colorValue = (i + halfSize) / (2.0f * halfSize); // Normalize to 0-1
+
+        // Lines parallel to the X-axis
+        gridVertices.insert(gridVertices.end(), {
+            -halfSize, 0.0f, static_cast<float>(i), colorValue, 0.5f, 1.0f, // Start point
+             halfSize, 0.0f, static_cast<float>(i), colorValue, 0.5f, 1.0f  // End point
+        });
+
+        // Lines parallel to the Z-axis
+        gridVertices.insert(gridVertices.end(), {
+            static_cast<float>(i), 0.0f, -halfSize, 1.0f, colorValue, 0.5f, // Start point
+            static_cast<float>(i), 0.0f,  halfSize, 1.0f, colorValue, 0.5f  // End point
+        });
     }
 }
 
@@ -62,6 +70,7 @@ GridData CreateGrid() {
             gl_Position = projection * view * vec4(position, 1.0);
         }
     )";
+
 
     const char* fragmentShaderSource = R"(
         #version 330 core
