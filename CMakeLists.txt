@@ -18,8 +18,6 @@ add_executable(VertexLab
         drawing_utils.h
         utils.cpp
         utils.h
-        shader.cpp
-        shader.h
 )
 
 # Libraries
