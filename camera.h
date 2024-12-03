@@ -10,14 +10,14 @@ public:
     glm::vec3 target;
     glm::vec3 up;
 
-    float yaw, pitch, distance;
+    double yaw, pitch, distance;
 
     Camera();
     void updatePosition();
     glm::mat4 getViewMatrix();
-    void processMouseMovement(float xOffset, float yOffset);
-    void processMouseScroll(float yOffset);
-    void processKeyboard(GLFWwindow* window, float deltaTime);
+    void processMouseMovement(double xOffset, double yOffset);
+    void processMouseScroll(double yOffset);
+    void processKeyboard(GLFWwindow* window, double deltaTime);
 };
 
 #endif

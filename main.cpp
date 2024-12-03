@@ -30,17 +30,17 @@ int main() {
     ImGuiManager::Init(window);
 
     // Create grid and axes
-    GridData grid = CreateGrid();
+    const GridData grid = CreateGrid();
 
     // Main render loop
-    float lastFrame = 0.0f, fpsTimer = 0.0f;
+    double lastFrame = 0.0f, fpsTimer = 0.0f;
     int frameCount = 0;
-    float fps = 0.0f, frameTime = 0.0f;
+    double fps = 0.0f, frameTime = 0.0f;
 
     while (!glfwWindowShouldClose(window)) {
         // Calculate delta time
-        float currentFrame = glfwGetTime();
-        float deltaTime = currentFrame - lastFrame;
+        const double currentFrame = glfwGetTime();
+        const double deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
         // FPS calculation

@@ -5,10 +5,10 @@
 
 extern bool isMouseButtonDown;
 extern bool firstMouse;
-extern float lastX, lastY;
+extern double lastX, lastY;
 
 void mouseCallback(GLFWwindow* window, double xpos, double ypos);
-void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+void scrollCallback(GLFWwindow* window, double xffset, double yoffset);
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 
 #endif

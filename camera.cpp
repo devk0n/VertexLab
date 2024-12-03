@@ -21,8 +21,8 @@ glm::mat4 Camera::getViewMatrix() {
     return glm::lookAt(position, target, up);
 }
 
-void Camera::processMouseMovement(float xOffset, float yOffset) {
-    const float sensitivity = 0.1f;
+void Camera::processMouseMovement(double xOffset, double yOffset) {
+    constexpr float sensitivity = 0.1f;
     xOffset *= sensitivity;
     yOffset *= sensitivity;
 
@@ -35,7 +35,7 @@ void Camera::processMouseMovement(float xOffset, float yOffset) {
     updatePosition();
 }
 
-void Camera::processMouseScroll(float yOffset) {
+void Camera::processMouseScroll(double yOffset) {
     distance -= yOffset;
     if (distance < 1.0f) distance = 1.0f;
     if (distance > 50.0f) distance = 50.0f;
@@ -43,9 +43,9 @@ void Camera::processMouseScroll(float yOffset) {
     updatePosition();
 }
 
-void Camera::processKeyboard(GLFWwindow* window, float deltaTime) {
-    glm::vec3 direction = glm::normalize(target - position);
-    glm::vec3 right = glm::normalize(glm::cross(direction, up));
+void Camera::processKeyboard(GLFWwindow* window, const double deltaTime) {
+    const glm::vec3 direction = glm::normalize(target - position);
+    const glm::vec3 right = glm::normalize(glm::cross(direction, up));
 
     float speed = 15.0f * deltaTime;
 

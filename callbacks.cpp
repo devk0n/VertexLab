@@ -5,9 +5,9 @@ extern Camera camera;
 
 bool isMouseButtonDown = false;
 bool firstMouse = true;
-float lastX = 400, lastY = 300;
+double lastX = 400, lastY = 300;
 
-void mouseCallback(GLFWwindow* window, double xpos, double ypos) {
+void mouseCallback(GLFWwindow* window, const double xpos, const double ypos) {
     if (!isMouseButtonDown) return;
 
     if (firstMouse) {
@@ -16,8 +16,8 @@ void mouseCallback(GLFWwindow* window, double xpos, double ypos) {
         firstMouse = false;
     }
 
-    float xOffset = xpos - lastX;
-    float yOffset = lastY - ypos;
+    const double xOffset = xpos - lastX;
+    const double yOffset = lastY - ypos;
 
     lastX = xpos;
     lastY = ypos;
