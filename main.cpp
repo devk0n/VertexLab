@@ -11,6 +11,7 @@
 #include "imgui.h"
 #include "imgui_manager.h"
 #include "imgui_widgets.h"
+#include "shader.h"
 
 // Global variables
 Camera camera;
@@ -80,6 +81,7 @@ int main() {
     glDeleteVertexArrays(1, &grid.vao);
     glDeleteBuffers(1, &grid.vbo);
     glDeleteProgram(grid.shaderProgram);
+
     glfwTerminate();
 
     return 0;
