@@ -120,11 +120,11 @@ build CMakeFiles/VertexLab.dir/utils.cpp.o: CXX_COMPILER__VertexLab_unscanned_De
 #############################################
 # Link the executable VertexLab
 
-build VertexLab: CXX_EXECUTABLE_LINKER__VertexLab_Debug CMakeFiles/VertexLab.dir/main.cpp.o CMakeFiles/VertexLab.dir/camera.cpp.o CMakeFiles/VertexLab.dir/callbacks.cpp.o CMakeFiles/VertexLab.dir/backends/imgui_impl_glfw.cpp.o CMakeFiles/VertexLab.dir/backends/imgui_impl_opengl3.cpp.o CMakeFiles/VertexLab.dir/imgui_manager.cpp.o CMakeFiles/VertexLab.dir/imgui_widgets.cpp.o CMakeFiles/VertexLab.dir/drawing_utils.cpp.o CMakeFiles/VertexLab.dir/utils.cpp.o | /usr/lib/libGLEW.so /usr/lib/libglfw.so.3.4 /usr/lib/libGL.so
+build VertexLab: CXX_EXECUTABLE_LINKER__VertexLab_Debug CMakeFiles/VertexLab.dir/main.cpp.o CMakeFiles/VertexLab.dir/camera.cpp.o CMakeFiles/VertexLab.dir/callbacks.cpp.o CMakeFiles/VertexLab.dir/backends/imgui_impl_glfw.cpp.o CMakeFiles/VertexLab.dir/backends/imgui_impl_opengl3.cpp.o CMakeFiles/VertexLab.dir/imgui_manager.cpp.o CMakeFiles/VertexLab.dir/imgui_widgets.cpp.o CMakeFiles/VertexLab.dir/drawing_utils.cpp.o CMakeFiles/VertexLab.dir/utils.cpp.o | /usr/lib/libGLEW.so /usr/lib/libglfw.so.3.4 /usr/lib/libGLX.so /usr/lib/libOpenGL.so
   DEP_FILE = CMakeFiles/VertexLab.dir/link.d
   FLAGS = -g
   LINK_FLAGS = -Wl,--dependency-file,CMakeFiles/VertexLab.dir/link.d
-  LINK_LIBRARIES = /usr/lib/libGLEW.so  -limgui  /usr/lib/libglfw.so.3.4  /usr/lib/libGL.so
+  LINK_LIBRARIES = /usr/lib/libGLEW.so  -limgui  /usr/lib/libglfw.so.3.4  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so
   OBJECT_DIR = CMakeFiles/VertexLab.dir
   POST_BUILD = :
   PRE_LINK = :
